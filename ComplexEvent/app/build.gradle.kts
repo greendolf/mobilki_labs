@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.nestedlayouts2"
+    namespace = "com.example.complexevent"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.nestedlayouts2"
+        applicationId = "com.example.complexevent"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
