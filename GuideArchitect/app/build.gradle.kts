@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.gson"
-    compileSdk = 35
+    namespace = "com.example.guidearchitect"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.gson"
+        applicationId = "com.example.guidearchitect"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -59,11 +59,6 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.timber)
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.coil.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
