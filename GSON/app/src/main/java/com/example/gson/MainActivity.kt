@@ -21,6 +21,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.ClipboardManager
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalConfiguration
@@ -78,27 +79,11 @@ fun MainScreen(modifier: Modifier = Modifier, vm: MyViewModel = viewModel()) {
             Image(
                 painter = rememberAsyncImagePainter(link),
                 contentDescription = "Здесь должна быть картинка",
+                contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .size(imageSize)
                     .clickable { imageOnClick(link) }
             )
         }
     }
-
-
-//
-//    LaunchedEffect(Unit) {
-//        val response = RetrofitClient.apiService.getImagePage()
-//        text = response.photos.pages.toString()
-//        Timber.d(text)
-//    }
-
-//    LazyColumn(state = rememberLazyListState()) {
-//        Text(text)
-//        LaunchedEffect(Unit) {
-//            vm.getResponse()
-//            Timber.d(text)
-//        }
-//    }
-    // -----------------------------------
 }
